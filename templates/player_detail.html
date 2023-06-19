@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+  {% block title %} — {{ player.name }}{% endblock %}
+  {% block content %}
+    <h1>{{ player.name }}</h1>
+    <br>
+    <img  src="{{ player.image_url }}">
+    <br>
+    <hr style="color:red" >
+    <p>{{ player.bio }}</p>
+    <hr style="color:red" >
+  {% endblock %}

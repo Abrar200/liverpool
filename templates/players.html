@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} — Players{% endblock %}
+<div>
+   {% block content %}
+   <h1>
+   Players
+   <h1>
+   <div class="row" style='padding:25px'>
+      {% for player in players %}
+         <div class="col-auto col-md-3">
+            <div class="column" style='padding:25px'>
+               <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" width="20" height="300" src="{{ player.image_url }}">
+                  <div class="card-body">
+                     <h5 class="card-title"><a href="{% url 'player-detail' player.name %}">{{ player.name }}</a></h5>
+                     <p class="card-text">{{ player.position }}</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      {% endfor %}
+   </div>
+   {% endblock %}
+</div>

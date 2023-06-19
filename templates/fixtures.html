@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+  {% block title %} — Fixtures{% endblock %}
+  {% block content %}
+    <html>
+    <body>
+      <main>
+        <section id="fixtures">
+          <h2>Upcoming Fixtures</h2>
+          <ul id="fixtures-list">
+    <!--         {% for fixture in fixtures %}
+                <li>
+                    <strong>{{ fixture.summary }}</strong><br>
+                    <strong>{{ fixture.location }}</strong><br>
+                    <strong>Start:</strong> {{ fixture.start }}<br>
+                    <strong>End:</strong> {{ fixture.end }}<br>
+                </li>
+            {% endfor %}
+
+     -->      </ul>
+            <div id="team_schedule"></div><script language="javascript">document.getElementById('team_schedule').innerHTML="<iframe src='https://www.aiscore.com/team-liverpool/0ndkz6iy4zieq3z/schedule?isplugin=true'  height='300' width='100%' scrolling='auto' border='0' frameborder='0'></iframe>";</script><style>body{margin:0;padding:0}</style>
+
+            <div id="team_Standings"><script language="javascript">document.getElementById('team_Standings').innerHTML="<iframe src='https://www.aiscore.com/team-mohammedan-dhaka/63kv9im0nlbp7ez?isplugin=true&isteam_standings=true'  height='500' width='100%' scrolling='auto' border='0' frameborder='0'></iframe>";</script></div>
+        </section>
+      </main>
+    </body>
+    </html>
+
+
+
+  {% endblock %}
+

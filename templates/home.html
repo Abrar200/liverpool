@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} — Homepage{% endblock %}
+  {% block content %}
+    <span class="badge rounded-pill bg-danger">Headlines</span>
+    <br>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for news in news %}
+        <div class="col">
+          <div class="card">
+            <img src="{{ news.image.url }}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title"><a href="{% url 'news-detail' news.title %}">{{ news.title }}</a></h5>
+              <p class="card-text">{{ news.summary }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endblock %}
